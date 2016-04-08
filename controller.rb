@@ -8,22 +8,25 @@ class Controller
   end
 
   def run
+
     @view.red(@view.display_apple)
     @view.display_welcome
     @view.display_instructions
     @zip = gets.strip
-    until @zip == 'exit' || @zip == 'quit'
-      if @zip =~ /^\d{5}$/
+    if @zip =~ /^\d{5}$/
       markets_list = @suggestedmarkets.add_markets(Parse.parse(@zip))
       @view.display_suggested_markets(markets_list)
       @view.next_instructions
       @zip = gets.strip.downcase
-        unless @zip == 'quit' || @zip == 'exit'
-          self.run
-          @view.display_goodbye
+      if @zip == 'exit' || @zip == 'quit'
+        @view.display_goodbye
+      else
+        self.run
       end
+    else
+      self.run
     end
   end
-end
+
 
 end
