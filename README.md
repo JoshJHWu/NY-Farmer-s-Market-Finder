@@ -1,4 +1,3 @@
-# NY-Farmer-s-Market-Finder
 
 This app will find farmer's markets in your zip code using data from https://nycopendata.socrata.com.
 

@@ -6,7 +6,7 @@ class View
   end
 
   def display_instructions
-    puts "Please enter your zip code:"
+    puts "Please enter a valid zip code:"
   end
 
   def colorize(text, color_code)
@@ -65,5 +65,15 @@ class View
     end
   end
 
+  def next_instructions
+    puts "Type 'exit' to quit the app or enter to try another zip."
+  end
 
+  def display_goodbye
+    puts "Goodbye!"
+  end
+
+  def display_invalid_input
+    puts "Unrecognized input, please try again."
+  end
 end

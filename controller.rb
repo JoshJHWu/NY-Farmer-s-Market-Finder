@@ -12,9 +12,18 @@ class Controller
     @view.display_welcome
     @view.display_instructions
     @zip = gets.strip
-    markets_list = @suggestedmarkets.add_markets(Parse.parse(@zip))
-    @view.display_suggested_markets(markets_list)
+    until @zip == 'exit' || @zip == 'quit'
+      if @zip =~ /^\d{5}$/
+      markets_list = @suggestedmarkets.add_markets(Parse.parse(@zip))
+      @view.display_suggested_markets(markets_list)
+      @view.next_instructions
+      @zip = gets.strip.downcase
+        unless @zip == 'quit' || @zip == 'exit'
+          self.run
+          @view.display_goodbye
+      end
+    end
   end
-
+end
 
 end
