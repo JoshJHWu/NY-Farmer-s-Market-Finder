@@ -1,6 +1,6 @@
 #README
 
-NY Farmer's Market Finder is a commandline app that gives you information on local markets searchable by zip code. This was built in during a 3 hour mini hackathon aimed to utilize NYC's open data API's https://nycopendata.socrata.com.
+NY Farmer's Market Finder is a commandline app that gives you information on local markets searchable by zip code. This was built in during a 2 hour mini hackathon aimed to utilize NYC's open data API's https://nycopendata.socrata.com.
 
 #How to use
 1. Clone repository
